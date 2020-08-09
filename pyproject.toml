@@ -29,7 +29,7 @@ include = '\.pyi?$'
 
 [tool.isort]
 include_trailing_comma = true
-known_first_party = "hyperspace-rpc"
+known_first_party = "hyperspace_rpc"
 line_length = 80
 multi_line_output = 3
 skip = ".tox"
@@ -51,20 +51,20 @@ isolated_build = True
 [testenv:lint]
 skipdist = True
 deps = flake8
-commands = flake8 {posargs:--max-line-length 80} hyperspace-rpc/
+commands = flake8 {posargs:--max-line-length 80} hyperspace_rpc/
 
 [testenv:sort]
 skipdist = True
 deps = isort
-commands = isort {posargs:-c} hyperspace-rpc/
+commands = isort {posargs:-c} hyperspace_rpc/
 
 [testenv:format]
 skipdist = True
 deps = black
-commands = black {posargs:--check} hyperspace-rpc/
+commands = black {posargs:--check} hyperspace_rpc/
 
 [testenv:type]
 skipdist = True
 deps = mypy
-commands = mypy {posargs:--ignore-missing-imports} hyperspace-rpc/
+commands = mypy {posargs:--ignore-missing-imports} hyperspace_rpc/
 """
