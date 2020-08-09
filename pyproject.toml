@@ -37,33 +37,13 @@ skip = ".tox"
 [tool.tox]
 legacy_tox_ini = """
 [tox]
-envlist =
-    lint
-    sort
-    format
-    type
-skip_missing_interpreters = True
+envlist = format
 isolated_build = True
 
 [testenv]
-
-[testenv:lint]
-skipdist = True
-deps = flake8
-commands = flake8 {posargs:--max-line-length 80} hyperspace_rpc/
-
-[testenv:sort]
-skipdist = True
-deps = isort
-commands = isort {posargs:-c} hyperspace_rpc/
 
 [testenv:format]
 skipdist = True
 deps = black
 commands = black {posargs:--check} hyperspace_rpc/
-
-[testenv:type]
-skipdist = True
-deps = mypy
-commands = mypy {posargs:--ignore-missing-imports} hyperspace_rpc/
 """
