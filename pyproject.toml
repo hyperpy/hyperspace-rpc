@@ -38,7 +38,6 @@ skip = ".tox"
 legacy_tox_ini = """
 [tox]
 envlist =
-    {py36,py37,py38}
     lint
     sort
     format
