@@ -1,7 +1,7 @@
-import hrpc_pb2 as hrpc__pb2
+from . import hrpc_pb2 as hrpc__pb2
 import purerpc
 
-import schema_pb2 as schema__pb2
+from . import schema_pb2 as schema__pb2
 
 
 class HyperspaceServicer(purerpc.Servicer):
